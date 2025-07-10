@@ -10,7 +10,7 @@ app.use(express.json());
 mongoose.connect(process.env.MONGODB_URI);
 
 app.get('/api/users', (req, res) => {
-  res.json([{ username: 'sample_user' }]);
+  res.send('PrivateConnect Backend is Running!');
 });
 
 app.listen(process.env.PORT || 5000, () => {
